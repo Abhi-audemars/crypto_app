@@ -2,6 +2,7 @@ import 'package:crypto_app/controller/api_controller.dart';
 import 'package:crypto_app/screens/more_info_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -68,10 +69,10 @@ class HomeScreen extends StatelessWidget {
                           height: 200,
                           width: MediaQuery.of(context).size.width,
                           decoration: BoxDecoration(
-                            color: Colors.white70,
+                            color: Colors.white54,
                             borderRadius: BorderRadius.circular(12),
                             border: Border.all(
-                                color: Colors.purple.shade100, width: 2),
+                                color: Colors.purple.shade100, width: 0.52),
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -122,10 +123,10 @@ class HomeScreen extends StatelessWidget {
                                         controller.coinData[index].name,
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 1,
-                                        style: const TextStyle(
+                                        style: GoogleFonts.poppins(
                                           color: Colors.grey,
                                           fontSize: 19,
-                                          fontWeight: FontWeight.bold,
+                                          fontWeight: FontWeight.w500,
                                         ),
                                       ),
                                     ),
@@ -136,7 +137,7 @@ class HomeScreen extends StatelessWidget {
                                 children: [
                                   Text(
                                     controller.coinData[index].price.toString(),
-                                    style: TextStyle(
+                                    style: GoogleFonts.poppins(
                                         color:
                                             controller.coinData[index].price > 1
                                                 ? Colors.green
@@ -147,7 +148,7 @@ class HomeScreen extends StatelessWidget {
                                   Text(
                                     controller.coinData[index].reward
                                         .toString(),
-                                    style: const TextStyle(
+                                    style: GoogleFonts.poppins(
                                         color: Colors.grey,
                                         fontSize: 18,
                                         fontWeight: FontWeight.w300),
@@ -163,15 +164,17 @@ class HomeScreen extends StatelessWidget {
                                   children: [
                                     Text(
                                       'Type: ${controller.coinData[index].type}',
-                                      style: const TextStyle(
-                                          color: Colors.orange,
-                                          fontWeight: FontWeight.w500),
+                                      style: GoogleFonts.poppins(
+                                        color: Colors.orange,
+                                        fontWeight: FontWeight.w500,
+                                      ),
                                     ),
                                     Text(
                                       'Algorithm: ${controller.coinData[index].algorithm}',
-                                      style: const TextStyle(
-                                          color: Colors.blue,
-                                          fontWeight: FontWeight.w500),
+                                      style: GoogleFonts.poppins(
+                                        color: Colors.blue,
+                                        fontWeight: FontWeight.w500,
+                                      ),
                                     ),
                                   ],
                                 ),
